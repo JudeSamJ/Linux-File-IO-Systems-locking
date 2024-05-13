@@ -21,7 +21,6 @@ Execute the C Program for the desired output.
 
 ## 1.To Write a C program that illustrates files copying 
 ```
-#include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -35,13 +34,12 @@ out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
 while((nread = read(in,block,sizeof(block))) > 0)
 write(out,block,nread);
 exit(0);}
+```
 
 
-```
-## output
-```
--rwxr-xr-x    1 root     root         18348 Apr 17 14:14 file.o
-```
+
+
+
 
 ## 2.To Write a C program that illustrates files locking
 ```
@@ -82,15 +80,20 @@ getchar();
 close (fd);
 return 0;
 }
+
 ```
+
 
 
 
 ## OUTPUT
+## C program that illustrates files copying:
+![alt text](ex7op1.png)
 
-```
--rwxr-xr-x    1 root     root         18376 Apr 17 14:20 text.o
-```
+
+## C program that illustrates files locking:
+![alt text](exp7op2.png)
+
 
 # RESULT:
 The programs are executed successfully.
